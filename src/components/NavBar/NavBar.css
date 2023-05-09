@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url("background-login.webp");
+    background-size: cover;
+    /* background-position: top 50px; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: rgb(97, 255, 121);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    height: 80px;
+    width: 1540px;
+    font-size: 25px;
+}
+
+.HomeSite{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.HomeSite span{
+    padding-left: 10px;
+    height: 100%;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    align-items: center;
+}
+
+nav a{
+    color: inherit;
+    text-decoration: none;
+}
+
+nav li{
+    padding: 15px;
+}
+
+nav li:hover{
+    background-color: rgba(255, 255, 255, 0.407);
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    width: 60px;
+}

@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    /* background-image: url("background-login.webp"); */
+    /* background-size: cover; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form{
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    background-color: rgba(255, 255, 255, 0.496);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    font-size: 20px;
+}
+
+.form div{
+    margin: 15px;
+}
+
+.form div input{
+    border: 1px solid rgb(175, 255, 95);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(175, 255, 95);
+    width: 310px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.form div input[type = "submit"]{
+    border: 1px solid rgb(95, 215, 255);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(95, 215, 255);
+    width: fit-content;
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+
+.title{
+    margin-top: 25%;
+    text-align: center;
+    font-size: 50px;
+}

@@ -1,0 +1,6 @@
+export { default as Home } from './Home'
+export { default as LogIn } from './LogIn'
+export { default as Humidity } from './Humidity'
+export { default as Tempurature } from './Tempurature'
+export { default as Moisture } from './Moisture'
+export { default as Watering } from './Watering'

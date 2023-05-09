@@ -1,0 +1,20 @@
+.contenthome{
+    display: flex;
+    flex-direction: row;
+}
+
+.linechart{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenthome img{
+    margin: 40px;
+    height: 400px;
+    width: auto;
+}
+
+.linechart img{
+    height: 200px;
+    width: auto;
+}
