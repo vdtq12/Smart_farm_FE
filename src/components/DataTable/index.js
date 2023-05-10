@@ -21,8 +21,6 @@ const DataTable = (props) => {
 
     useWebSocket(ws_url, {
         onMessage: (res) => {
-            // console.log(res)
-            // console.log(res.data)
             const obj_res = JSON.parse(res.data)
             if (obj_res[0].name === "humid") {
                 setHumidData(obj_res)
@@ -35,57 +33,54 @@ const DataTable = (props) => {
             }
             else if (obj_res[0].name === "pump") {
                 setPumpData(obj_res)
-                console.log(obj_res)
+                console.log('data received:', res.data)
             }
 
         }
     });
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         if (isCalling === "humidity") {
-    //             axios.get('http://localhost:3000/humidData')
-    //             .then((res) => {
-    //                 // console.log(res.data)
-    //                 setHumidData(res.data)     
-    //             })
-    //             .catch((err) => {
-    //                 console.log(err)
-    //             })
-    //         }
-    //         else if (isCalling === "moisture") {
-    //             axios.get('http://localhost:3000/moistData')
-    //             .then((res) => {
-    //                 // console.log(res.data)
-    //                 setMoistData(res.data)
-    //             })
-    //             .catch((err) => {
-    //                 console.log(err)
-    //             })
-    //         }
-    //         else if (isCalling === "temperature") {
-    //             axios.get('http://localhost:3000/tempData')
-    //             .then((res) => {
-    //                 // console.log(res.data)
-    //                 setTempData(res.data)
-    //             })
-    //             .catch((err) => {
-    //                 console.log(err)
-    //             })
-    //         }
-    //         else if (isCalling === "watering"){
-    //             axios.get('http://localhost:3000/pumpData')
-    //             .then((res) => {
-    //                 // console.log(res.data)
-    //                 setPumpData(res.data)
-    //             })
-    //             .catch((err) => {
-    //                 console.log(err)
-    //             })
-    //         }
-    //      }, 5000);
-    //     return () => clearInterval(interval);
-    // },[])
+    useEffect(() => {
+            if (isCalling === "humidity") {
+                axios.get('http://localhost:3000/humidData')
+                .then((res) => {
+                    // console.log(res.data)
+                    setHumidData(res.data)     
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+            }
+            else if (isCalling === "moisture") {
+                axios.get('http://localhost:3000/moistData')
+                .then((res) => {
+                    // console.log(res.data)
+                    setMoistData(res.data)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+            }
+            else if (isCalling === "temperature") {
+                axios.get('http://localhost:3000/tempData')
+                .then((res) => {
+                    // console.log(res.data)
+                    setTempData(res.data)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+            }
+            else if (isCalling === "watering"){
+                axios.get('http://localhost:3000/pumpData')
+                .then((res) => {
+                    // console.log(res.data)
+                    setPumpData(res.data)
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+            }
+    },[])
     
 
     return(

@@ -11,10 +11,6 @@ const Home = () => {
       <NavBar />
       <div className='contenthome'>
         <img src={watering} alt="wtring" />
-        <div className='linechart'>
-          <img src={humidity} alt="humidity" />
-          <img src={temperature} alt="temperature" />
-        </div>
       </div>
     </div>
   )
